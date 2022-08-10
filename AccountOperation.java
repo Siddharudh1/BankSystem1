@@ -29,7 +29,7 @@ public class AccountOperation {
 
 	public static void withDrawMoney(String username,double amount) {
 		for(Account ele : L1) {
-			if(ele.getUsername().equals(username) && amount > ele.getBalance()) {
+			if(ele.getUsername().equals(username) && amount < ele.getBalance()) {
 				double bal = ele.getBalance();
 				ele.setBalnce(bal - amount);
 				System.out.println("Amount "+amount+ "withdraw successfully ");
