@@ -80,7 +80,7 @@ public class Account {
 		return Age;
 	}
 	public void setAge(int age) {
-		if(age < 0)
+		if(age < 0 || age > 100)
 			throw new IllegalArgumentException("Age should be greater than zero");
 		else Age = age;
 	}
